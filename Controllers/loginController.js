@@ -5,7 +5,7 @@ require("dotenv").config();
 const User = require("../Model/user")
 
 const loginRender = (req, res) => {
-    res.render("login.ejs", {err:" "})
+    res.render("landing.ejs", {err:" "})
 }
 
 const loginSubmit = async (req, res) => {
