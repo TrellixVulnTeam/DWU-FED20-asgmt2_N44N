@@ -7,14 +7,14 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const resetRender = (req, res) => {
-  res.render("reset.ejs", { err: "" });
+  res.render("user/reset.ejs", { err: "" });
 };
 
 const resetSubmit = async (req, res) => {
   const email = req.body.email;
   const user = await User.findOne({ email: email});
 
-  if (!user) return res.redirect("/register");
+  if (!user) return res.redirect("user/reset");
 
   const token = crypto.randomBytes(32).toString("hex");
 
@@ -38,7 +38,7 @@ const msg = {
       console.error(error)
     })
 
-  res.render("checkMail.ejs");
+  res.render("user/checkMail.ejs");
 };
 
 const resetParams = async (req, res) => {
@@ -52,9 +52,9 @@ const resetParams = async (req, res) => {
 
     if (!user) return res.redirect("/register");
 
-    res.render("resetForm.ejs", { err: "", email: user.email });
+    res.render("user/resetForm.ejs", { err: "", email: user.email });
   } catch (err) {
-    res.render("reset.ejs", { err: " Försök igen" });
+    res.render("user/reset.ejs", { err: " Försök igen" });
   }
 };
 
