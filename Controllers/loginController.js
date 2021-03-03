@@ -13,7 +13,7 @@ const loginSubmit = async (req, res) => {
 
     const user = await User.findOne({ userName: userName });
 
-    if (!user) return res.redirect("/register");
+    if (!user) return res.render("/register");
 
   const validUser = await bcrypt.compare(password, user.password);
   if (!validUser) return res.redirect("/login");

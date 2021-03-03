@@ -1,4 +1,8 @@
-@import "pages/landing.scss";
-@import "pages/home.scss";
-@import "pages/dictionary.scss";
-@import "pages/profile.scss";
+@import "pages/landing";
+@import "pages/home";
+@import "pages/dictionary";
+@import "pages/profile";
+
+@import "layout/navbar";
+@import "layout/sidebar";
+@import "layout/footer";

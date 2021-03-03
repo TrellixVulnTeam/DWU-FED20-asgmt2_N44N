@@ -1,5 +1,1 @@
-div {
-  width: 100px;
-  height: 100px;
-  background-color: green;
-  opacity: 9; }
+.landingMain{display:flex;flex-direction:column;align-items:center;justify-content:center}.landingMain .logo{display:flex;align-items:center;justify-content:center;width:200px;height:200px;background-color:lightgrey;opacity:9;border-radius:50%;margin:5%}.landingMain form{display:flex;flex-direction:column;align-items:center}.landingMain form input{width:300px;height:50px;border-radius:10px;margin:10px;text-indent:10px;font-size:large}.landingMain form button{width:200px;height:50px;border-radius:10px;font-size:large}.navbar{background-color:hotpink;width:100%;padding:5%;height:7rem}
