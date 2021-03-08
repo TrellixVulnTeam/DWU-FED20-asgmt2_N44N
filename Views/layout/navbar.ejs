@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <ul>
+    <li><a href="/"><div class="logo"></div></a></li>
+    <li><a href="/">Online Course</a></li>
+    <li><a href="/dictionary">Dictionary</a></li>
+    <li><a href="/profile">Profile</a></li>
+    <% if(user.user.role === 'Admin') { %>
+    <li><a href="/admin">Admin</a></li>
+    <% } %>
+    <li><a href="/logout">Logout</a></li>
+  </ul>
+</nav>

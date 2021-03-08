@@ -1,0 +1,50 @@
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin fontHeading() {
+    font-family: $ff-roboto;
+    font-weight: $fw-light;
+    font-size: $fs-heading;
+    color: $primary-txt;
+}
+
+@mixin fontTitle() {
+    font-family: $ff-roboto;
+    font-weight: $fw-regular;
+    font-size: $fs-title;
+    color: $primary-txt;
+}
+
+@mixin fontSubtitle() {
+    font-family: $ff-roboto;
+    font-weight: $fw-regular;
+    font-size: $fs-subtitle;
+    color: $primary-txt;
+}
+
+@mixin fontBody() {
+    font-family: $ff-roboto;
+    font-weight: $fw-light;
+    font-size: $fs-body;
+    color: $primary-txt;
+}
+
+@mixin fontBread() {
+    font-family: $ff-roboto;
+    font-weight: $fw-light;
+    font-size: $fs-bread;
+    color: $primary-txt;
+}
+
+@mixin fontLogotype() {
+    font-family: $ff-roboto;
+    font-weight: $fw-bold;
+    letter-spacing: 1.6rem;
+    font-size: $fs-logotype;
+    color: $primary-txt;
+    cursor: pointer;
+}

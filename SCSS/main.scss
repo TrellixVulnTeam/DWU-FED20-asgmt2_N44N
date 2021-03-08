@@ -1,4 +1,20 @@
-@import "pages/landing.scss";
-@import "pages/home.scss";
-@import "pages/dictionary.scss";
-@import "pages/profile.scss";
+@import "utilities/base";
+@import "utilities/mixins";
+@import "utilities/variables";
+
+@import "components/form";
+@import "components/button";
+@import "components/logo";
+
+@import "layout/navbar";
+@import "layout/sidebar";
+@import "layout/footer";
+@import "layout/contentContainer";
+@import "layout/mainSection";
+
+@import "pages/landing";
+@import "pages/home";
+@import "pages/dictionary";
+@import "pages/profile";
+@import "pages/upgrade";
+@import "pages/admin";

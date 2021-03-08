@@ -1,0 +1,51 @@
+.navbar {
+  @include fontTitle();
+  background-color: black;
+  width: 100vw;
+  height: 10vh;
+
+  ul {
+    @include flexCenter(column);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    height: 100vh;
+    width: 100vw;
+    background-color: $black;
+
+    a {
+      text-decoration: none;
+      text-shadow: 0 0 2px white;
+      color: $white;
+    }
+
+    li {
+      z-index: 2000;
+      text-align: center;
+      list-style: none;
+      margin: 1rem;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media screen and(min-width: 768px) {
+    justify-content: space-around;
+    height: 8rem;
+    padding: 0;
+
+    ul {
+      display: flex;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0 10% 0 10%;
+    }
+  }
+}

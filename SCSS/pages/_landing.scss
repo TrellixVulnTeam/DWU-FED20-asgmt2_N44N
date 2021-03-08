@@ -1,0 +1,11 @@
+.logoContainer {
+  @include flexCenter(column);
+  width: 20rem;
+  height: 20rem;
+  margin: 5%;
+  padding-right: 1rem;
+}
+
+form {
+  @include form();
+}
