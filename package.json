@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "build-css": "node-sass -o public/css scss",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +21,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.17",
     "node-sass": "^5.0.0",
-    "node-sass-middleware": "^0.11.0",
     "nodemon": "^2.0.7"
   }
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node.js Online Course</title>
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <section class="sec-vw-100">
+      <h1>Cancel Membership</h1>
+      <p>
+        We are sad to hear that you'd like to cancel your membership at Node.js
+        Online Course
+      </p>
+
+      <h4>Why are you leaving us?</h4>
+      <p>Please fill in the form below before canceling you membership.</p>
+
+      <form action="/cancel" method="post">
+        <span class="radioSpan">
+          <input type="radio" name="cancelreason" value="noPerks" />
+          <label for="noPerks"
+            >I don't feel like Membership gives me any perks</label
+          >
+
+          <input type="radio" name="cancelreason" value="tooExpensive" />
+          <label for="tooExpensive"
+            >I can't afford the cost of being a premium member any more</label
+          >
+
+          <input type="radio" name="cancelreason" value="graduated" />
+          <label for="graduated"
+            >I've finnished the full course and I'm super happy with the
+            product, thank you Node.js Online Course Team!</label
+          >
+
+          <p>You will be logged out in order to update your account. Press button below to proceed</p>
+          <button type="submit">CANCEL MEMBERSHIP</button>
+        </span>
+      </form>
+    </section>
+  </body>
+</html>

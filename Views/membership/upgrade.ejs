@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Online Course</title>
+    <link rel="stylesheet" href="/public/css/main.css">
+</head>
+<body>
+    <%- include("../layout/navbar.ejs") %>
+
+    <section class="sec-vw-100">
+        <div class="contentContainer">
+          <h1 class="logotype">NODE.JS ONLINE COURSE</h1>
+          <h1>We're happy that you'd like to update you membership, <%= user.user.userName %>!</h1>
+          <h2>Please fill out the form below to proceed</h2>
+          <p>With Premium membership, you will be able to take notes from each section of the Node.js Online Course and save them to your profile!</p>
+        
+          <%- include("./upgradeForm.ejs") %>
+        </div>
+      </section>
+</body>
+</html>
+

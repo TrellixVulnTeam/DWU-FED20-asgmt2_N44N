@@ -1,0 +1,13 @@
+@mixin button() {
+    @include flexCenter(column);
+    width: 25rem;
+    height: 5rem;
+    margin: .5rem;
+    color: $black;
+    background-color: $primary-alt;
+    border: .1rem solid $black;
+    border-radius: 1rem;
+    font-size: large;
+    text-decoration: none;
+    cursor: pointer;
+  }

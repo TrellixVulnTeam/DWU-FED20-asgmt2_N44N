@@ -1,0 +1,35 @@
+<form action="/upgrade" method="post">
+  <hr />
+
+  <h2>Account Information</h2>
+
+  <input type="text" name="firstName" placeholder="First Name" required />
+  <input type="text" name="lastName" placeholder="Last Name" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <input type="text" name="address" placeholder="Home Address" required />
+  <input type="number" name="zip" placeholder="Postal Code" required />
+  <input type="text" name="country" placeholder="Country" required />
+  <input type="tel" name="phone" placeholder="Phone Number" required />
+
+  <hr />
+
+  <h2>Billing Information</h2>
+
+  <input type="text" name="cardName" placeholder="Name on Card" required />
+  <input
+    type="number"
+    name="cardNumber"
+    placeholder="Credit Card Number"
+    required
+  />
+  <input type="number" name="CVC" placeholder="CVC" required />
+
+  <span class="radioSpan">
+    <label for="6month">6 month plan (49$)</label>
+    <input type="radio" name="plan" value="6month" />
+    <label for="12month">12 month plan (80$)</label>
+    <input type="radio" name="plan" value="12month" />
+  </span>
+
+  <button type="submit">UPGRADE</button>
+</form>

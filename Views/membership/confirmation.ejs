@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node.js Online Course</title>
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <section class="sec-vw-100">
+        <div class="logoContainer"><div class="logo"></div></div>
+      <h1>Thank you for upgrading your membership, <%= user.userName %>!</h1>
+      <h3>
+        Find your credentials below.
+        <b> Your confirmation has been sent to you by email. </b>
+      </h3>
+      <h2>Please enjoy your new features!</h2>
+
+      <h3>Membership information:</h3>
+      <h4><%= user.userName %>: <%= user.role %></h4>
+
+      <ul>
+        <li>First name: <%= membership.firstName %></li>
+        <li>Last name: <%= membership.lastName %></li>
+        <li>Home address: <%= membership.address %></li>
+        <li>Postal code: <%= membership.zip %></li>
+        <li>Country: <%= membership.country %></li>
+        <li>Phone number: <%= membership.phone %></li>
+        <li>Payment plan: <%= membership.plan %></li>
+      </ul>
+
+      <a href="/logout">Logout to update your account</a>
+    </section>
+  </body>
+</html>

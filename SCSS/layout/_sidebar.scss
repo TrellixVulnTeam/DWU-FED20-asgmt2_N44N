@@ -1,0 +1,24 @@
+.sidebar {
+  width: 20%;
+  height: 100%;
+  background-color: burlywood;
+  @include flexCenter(column);
+
+  a {
+    text-decoration: none;
+    color: $black;
+    &:visited {
+      opacity: 0.2;
+    }
+  }
+
+  .active {
+    font-weight: bold;
+  }
+
+  li {
+    text-align: center;
+    list-style: none;
+    margin: 2rem;
+  }
+}

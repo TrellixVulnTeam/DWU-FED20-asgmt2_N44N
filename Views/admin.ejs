@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node.js Online Course</title>
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <header><%- include("./layout/navbar.ejs") %></header>
+    <section class="sec-vw-100">
+    
+      <div class="contentContainer">
+        <h1 class="logotype">NODE.JS ONLINE COURSE</h1>
+        <h2>Admin Page</h2>
+        <div class="logoContainer"><div class="logo"></div></div>
+        <h1>Welcome Admin, <%= user.user.userName %></h1>
+      
+
+      <h2>What type of content would you like to create?</h2>
+      <form action="/admin" method="post">
+        <span class="radioSpan">
+          <label for="Course">Course Content</label>
+          <input type="radio" name="type" value="Course" />
+          <label for="Dictionary">Dictionary Content</label>
+          <input type="radio" name="type" value="Dictionary" />
+        </span>
+        <input type="text" name="category" placeholder="Category" required />
+        <input type="text" name="title" placeholder="Title" required />
+        <textarea name="body" placeholder="Body"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      </div>
+
+      <div class="adminPosts">
+      <% post.forEach(post => { %>
+      
+
+      <h2><%=post.category%></h2>
+      <h3><%=post.title%></h3>
+      <p><%=post.body%></p>
+
+      
+      <% }) %>
+      </div>
+
+      
+    
+    </section>
+  </body>
+</html>

@@ -1,32 +1,31 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
-var sassMiddleware = require('node-sass-middleware');
-var path = require('path');
+var path = require("path");
 require("dotenv").config();
 
 const userRouter = require("./Routes/userRoute");
 const homeRouter = require("./Routes/homeRoute");
+const adminRouter = require("./Routes/adminRoute");
+const dictionaryRouter = require("./Routes/dictionaryRoute");
+const profileRouter = require("./Routes/profileRoute");
+const membershipRouter = require("./Routes/membershipRoute")
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(sassMiddleware({
-  src: path.join(__dirname, 'scss'),
-  dest: path.join(__dirname, 'public'),
-  debug: true,
-  outputStyle: 'compressed',
-  prefix:  '/public/css',
-}));
-
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use("/public", express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
 
 app.use(userRouter);
 app.use(homeRouter);
+app.use(adminRouter);
+app.use(dictionaryRouter);
+app.use(profileRouter);
+app.use(membershipRouter);
 
 const options = {
   useNewUrlParser: true,

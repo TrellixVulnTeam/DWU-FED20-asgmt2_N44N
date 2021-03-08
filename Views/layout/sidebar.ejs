@@ -1,0 +1,8 @@
+<div class="sidebar">
+  <% post.forEach(post => { %>
+  <dl>
+    <dt><a href="#<%=post.category%>"><%=post.category%></a><dt>
+    <dd><a href="#<%=post.title%>"><%=post.title%> </a></dd>
+  </dl>
+<% }) %>
+</div>

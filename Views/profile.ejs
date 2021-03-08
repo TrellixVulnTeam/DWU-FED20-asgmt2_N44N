@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Node.js Online Course</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <%- include("./layout/navbar.ejs") %>
+
+      <section class="profileMain">
+        <h1>User Profile</h2>
+        <span class="profileIcon"></span>
+        <ul class="userInfo">
+            <li>Username: <%= user.user.userName %></li>
+            <li>Member Since: <%= user.user.memberSince %></li>
+            <li>Membership: <%= user.user.role %></li>
+        </ul>
+
+        <% if (locals.msg) { %>
+          <%= msg %>
+       <% } %>
+       
+        <a href="/reset">RESET PASSWORD</a>
+
+        <% if (user.user.role === 'Basic Membership') { %>
+          <a href="/upgrade">UPGRADE MEMBERSHIP</a>
+       <% } else { %>
+        <p>Would you like to cancel your membership?</p>
+        <a href="/cancel">CLICK HERE</a>
+
+      <% } %>
+        
+      </section>
+    </header>
+  </body>
 </html>

@@ -1,14 +1,46 @@
-<h1>Welcome, <%= user.user.userName %></h1>
-<a href="/logout">Logout</a>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Node.js Online Course</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <header><%- include("./layout/navbar.ejs") %></header>
+
+    <section class="sec-vw-80">
+      <%- include("./layout/sidebar.ejs") %>
+      <div class="contentContainer">
+        <h1 class="logotype">NODE.JS ONLINE COURSE</h1>
+        <h1>Welcome, <%= user.user.userName %></h1>
+
+        <span>
+          Welcome to introcourse for node.js. Here we will teach you the basics
+          steps needed for you to set up your own first project!
+        </span>
+
+        <span>
+          In order to do this course, you’ll need basic knowledge of HTML, CSS
+          and JavaScript. As we move along we will also incorporate template
+          engine EJS. Along with the step by step program, we also provide a
+          dictionary, explaining all the new terms and methods that we introduce
+          as we move further into the quite complicated world of node.js. As you
+          expand your knowledge, though, we can assure you that you will realize
+          the endless possibilities granted by node.js.
+        </span>
+
+        <span
+          >After the course is completed, you will be able to do the following:
+          Set up your own database through mongoDB, create a register function
+          for new users as well as a reset password function, login/logout
+          function, create jsonWebToken for authentication, verification, get
+          introduced to the CRUD functions as well as HTML protocol.
+        </span>
+
+        <span>Let’s get started!</span>
+      </div>
+    </section>
+  </body>
 </html>

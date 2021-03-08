@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Node.js Online Course</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="/public/css/main.css" />
+  </head>
+  <body>
+    <header><%- include("./layout/navbar.ejs", { post: post }) %></header>
+
+    <section class="sec-vw-80">
+      <%- include("./layout/sidebar.ejs") %>
+      <div class="contentContainer">
+        <h1 class="logotype">NODE.JS ONLINE COURSE</h1>
+        <h2>Dictionary</h2>
+
+      <% post.forEach(post => { %>
+        <h2><%=post.title%></h2>
+        <p><%=post.body%></p>
+      <% }) %>
+
+      </div>
+    </section>
+  </body>
 </html>

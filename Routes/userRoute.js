@@ -4,22 +4,22 @@ const router = express.Router();
 const {
   registerRender,
   registerSubmit,
-} = require("../Controllers/registerController");
+} = require("../Controllers/userControllers/registerController");
 
 const {
     loginRender,
     loginSubmit,
-} = require("../Controllers/loginController")
+} = require("../Controllers/userControllers/loginController")
 
 const {
   resetRender,
   resetSubmit,
   resetParams,
   resetFormSubmit,
-} = require("../controllers/resetPassword");
+} = require("../Controllers/userControllers/resetPassword");
 
 router.get("/register", registerRender);
-router.post("/register", registerSubmit)
+router.post("/register", registerSubmit);
 
 router.get("/login", loginRender);
 router.post("/login", loginSubmit)

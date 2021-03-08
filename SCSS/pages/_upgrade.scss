@@ -1,0 +1,25 @@
+form {
+    @include flexCenter(column);
+
+    h2 {
+        margin: 1rem;
+    }
+
+    input {
+        margin: .2rem;
+    }
+
+    hr {
+        margin: 1rem;
+        width: 80vw;
+
+    }
+
+    .radioSpan {
+        border: 2px solid black;
+        border-radius: 1rem;
+        flex-direction: row;
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
